@@ -10,7 +10,10 @@ import Contact from "./static_pages/Contact";
 import Help from "./static_pages/Help";
 import './App.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
-import Products from './products/Index';
+import Articles from './articles/Index';
+import New from './articles/New';
+import Show from './articles/Show';
+import Edit from './articles/Edit';
 
 function App() {
   return (
@@ -34,7 +37,7 @@ function App() {
             <ul className="nav navbar-nav navbar-right collapse navbar-collapse"
                 id="bs-example-navbar-collapse-1">
               <li><NavLink exact to="/">Home</NavLink></li>
-              <li><NavLink to="/products">Products</NavLink></li>
+              <li><NavLink to="/articles">Articles</NavLink></li>
               <li><NavLink to="/help">Help</NavLink></li>
                 <li><a href="/login">Log in</a></li>
             </ul>
@@ -44,10 +47,13 @@ function App() {
 
       <div className="container">
         <Route exact path="/" component={Home}/>
-        <Route path="/products" component={Products}/>
         <Route path="/about" component={About}/>
         <Route path="/contact" component={Contact}/>
         <Route path="/help" component={Help}/>
+        <Route exact path="/articles" component={Articles}/>
+        <Route exact path="/articles/new" component={New}/>
+        <Route exact path="/articles/:id" component={Show}/>
+        <Route exact path="/articles/:id/edit" component={Edit}/>
 
         <footer className="footer">
           <small>

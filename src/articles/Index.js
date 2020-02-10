@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 
+import { Link } from "react-router-dom";
+
 import axios from 'axios';
 
 const apiUrl = 'http://localhost:3000/api/articles?q=';
-const imgUrl = 'http://localhost:3000/';
 
 class Index extends Component {
 
@@ -61,12 +62,14 @@ class Index extends Component {
         <td>{response.id}</td>
         <td>{response.title}</td>
         <td>{response.text}</td>
-        <td></td>
+        <td><Link to={`/articles/${response.id}`}>Show</Link></td>
+        <td><Link to={`/articles/${response.id}/edit`}>Edit</Link></td>
+        <td><Link to={`/articles/${response.id}`}>Delete</Link></td>
       </tr>
     });
 
     return (
-      <div>
+      <React.Fragment>
         <input ref={ (input) => { this.searchBar = input } } value={ this.state.term } onChange={ this.getAutoCompleteResults.bind(this) } type='search' placeholder='Search Name' className='form-control' />
         <table className="table">
           <thead>
@@ -74,14 +77,14 @@ class Index extends Component {
               <th scope="col">#</th>
               <th scope="col">Title</th>
               <th scope="col">Text</th>
-              <th scope="col">Action</th>
+              <th scope="col" colSpan="3"></th>
             </tr>
           </thead>
           <tbody>
             { autoCompleteList }
           </tbody>
         </table>
-      </div>
+      </React.Fragment>
     )
   }
 }
