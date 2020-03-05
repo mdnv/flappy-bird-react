@@ -10,10 +10,6 @@ import Contact from "./static_pages/Contact";
 import Help from "./static_pages/Help";
 import './App.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
-import Articles from './articles/Index';
-import New from './articles/New';
-import Show from './articles/Show';
-import Edit from './articles/Edit';
 
 function App() {
   return (
@@ -21,7 +17,7 @@ function App() {
     <div className="App">
       <header className="navbar navbar-fixed-top navbar-inverse">
         <div className="container">
-        <NavLink exact id="logo" to="/">sample app</NavLink>
+        <NavLink exact id="logo" to="/">manh nguyen</NavLink>
           <nav>
             <div className="navbar-header">
               <button type="button" className="navbar-toggle collapsed"
@@ -37,9 +33,25 @@ function App() {
             <ul className="nav navbar-nav navbar-right collapse navbar-collapse"
                 id="bs-example-navbar-collapse-1">
               <li><NavLink exact to="/">Home</NavLink></li>
-              <li><NavLink to="/articles">Articles</NavLink></li>
+              {/*<li><NavLink to="/articles">Articles</NavLink></li>*/}
               <li><NavLink to="/help">Help</NavLink></li>
-                <li><a href="/login">Log in</a></li>
+              {/*<li><a href="/login">Log in</a></li>*/}
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  Profile <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  {/*<li><a href="javascript:void(0)">I'am a Web Developer in 2NF Sofware, past: Ruby Development</a></li>
+                  <li><a href="javascript:void(0)">EDUCATION: Hanoi Vocational College Of Technology</a></li>*/}
+                  <li><a href="javascript:void(0)">BIRTHDAY: February 13, 1995</a></li>
+                  <li><a href="javascript:void(0)">BIRTHPLACE: Hoabinh, Vietnam</a></li>
+                  <li><a href="javascript:void(0)">BIRTH SIGN: Aquarius</a></li>
+                  <li class="divider"></li>
+                  {/*<li>
+                    <a rel="nofollow" data-method="delete" href="/logout">Log out</a>
+                  </li>*/}
+                </ul>
+              </li>
             </ul>
           </nav>
         </div>
@@ -50,11 +62,6 @@ function App() {
         <Route path="/about" component={About}/>
         <Route path="/contact" component={Contact}/>
         <Route path="/help" component={Help}/>
-        <Route exact path="/articles" component={Articles}/>
-        <Route exact path="/articles/new" component={New}/>
-        <Route exact path="/articles/:id" component={Show}/>
-        <Route exact path="/articles/:id/edit" component={Edit}/>
-
         <footer className="footer">
           <small>
             The <a href="https://www.railstutorial.org/">React Tutorial</a> by <a href="https://mdnv.github.io/">mdnv</a>
@@ -63,7 +70,7 @@ function App() {
             <ul>
               <li><NavLink to="/about">About</NavLink></li>
               <li><NavLink to="/contact">Contact</NavLink></li>
-              <li><a href="https://news.railstutorial.org/">News</a></li>
+              <li><a href="https://reactjs.org/blog/" target="_blank">News</a></li>
             </ul>
           </nav>
         </footer>
