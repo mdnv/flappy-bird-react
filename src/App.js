@@ -36,22 +36,6 @@ function App() {
               {/*<li><NavLink to="/articles">Articles</NavLink></li>*/}
               <li><NavLink to="/help">Help</NavLink></li>
               {/*<li><a href="/login">Log in</a></li>*/}
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  Profile <b class="caret"></b>
-                </a>
-                <ul class="dropdown-menu">
-                  {/*<li><a href="javascript:void(0)">I'am a Web Developer in 2NF Sofware, past: Ruby Development</a></li>
-                  <li><a href="javascript:void(0)">EDUCATION: Hanoi Vocational College Of Technology</a></li>*/}
-                  <li><a href="javascript:void(0)">BIRTHDAY: February 13, 1995</a></li>
-                  <li><a href="javascript:void(0)">BIRTHPLACE: Hoabinh, Vietnam</a></li>
-                  <li><a href="javascript:void(0)">BIRTH SIGN: Aquarius</a></li>
-                  <li class="divider"></li>
-                  {/*<li>
-                    <a rel="nofollow" data-method="delete" href="/logout">Log out</a>
-                  </li>*/}
-                </ul>
-              </li>
             </ul>
           </nav>
         </div>
@@ -64,7 +48,7 @@ function App() {
         <Route path="/help" component={Help}/>
         <footer className="footer">
           <small>
-            The <a href="https://www.railstutorial.org/">React Tutorial</a> by <a href="https://mdnv.github.io/">mdnv</a>
+            Copyright ©2020 All rights reserved
           </small>
           <nav>
             <ul>

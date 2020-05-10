@@ -1,14 +1,12 @@
 import React, { Component } from "react";
 import logo from '../logo.svg';
+import avatar from '../83067587_199515441229363_7409123287759847424_o.jpg';
 
 class Home extends Component {
   render() {
     return (
         <div>
         <div className="center jumbotron">
-            <h1>Welcome to the my page</h1>
-            <p>I'am a Web Developer in 2NF Sofware, former: Ruby Development</p>
-            <p>EDUCATION: Hanoi Vocational College Of Technology</p>
             <a className="btn btn-lg btn-primary" href="https://adifaker.000webhostapp.com/" target="_blank">adifaker</a>
             <a className="btn btn-lg btn-warning" href="https://clotheshub.herokuapp.com/" target="_blank">clotheshub</a>
             <a className="btn btn-lg btn-success" href="https://mdnv.github.io/" target="_blank">blog</a>
